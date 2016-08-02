@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<!--内页详情开始-->
+<div class="n_Main">
+	<div class="n_left">
+		<div class="n_title">
+			<h3>联系我们</h3>
+			<p>CONTACT US</p>
+		</div>
+		<ul>
+			<li><a href="about.html">联系我们</a></li>
+			<li><a href="message.html">在线留言</a></li>
+		</ul>
+		<div class="QQline">
+			<a href="#"><img src="images/online.jpg" /></a>
+		</div>
+		<div class="map">
+			<a href="#"><img src="images/n_map.jpg" /></a>
+		</div>
+		<div class="n_contact">
+			<img src="images/n_contact.jpg" />
+			联系电话：	0816-8888888<br/>
+			　　传真：	0816-8888888<br/>
+			电子邮箱：	123456789@qq.com<br/>
+			　　邮编：	621000<br/>
+			公司地址：	绵阳市三江工业园<br/>
+			企业网址：	www.xiaoaokeji.com<br/>
+		</div>
+	</div>
+	
+	<div class="n_right">
+		<div class="location">
+			当前所在位置：首页 >> 在线留言
+			<div class="n_phone">联系电话:13458000000</div>
+		</div>
+		<div class="n_centent">
+				
+				
+				<script type="text/javascript">
+function cfm_msg(){
+	if($("#nickname").val()==""){
+		alert("请填写联系人姓名！");
+		$("#nickname").focus();
+		return false;
+		}
+	if($("#contact").val()==""){
+		alert("请填写联系人电话！");
+		$("#contact").focus();
+		return false;
+		}
+	if($("#content").val()==""){
+		alert("请填写留言内容！");
+		$("#content").focus();
+		return false;
+		}
+	$("#form").submit();
+	}
+</script>	
+		　　
+			<form name="form" id="form" action="" method="POST" enctype="application/x-www-form-urlencoded">
+            	<ul>
+                	<li class="table_1">
+                    	<div>
+                        	<label>姓　　名：</label>
+                            <input type="text" name="nickname" id="nickname" style="width:262px; height:30px; outline:none"/>
+                        </div>
+                        <div>
+                        	<label>电　　话：</label>
+                            <input type="text" name="contact" id="contact" style="width:262px; height:30px;outline:none"/>
+                        </div>
+                    </li>
+                    <li>
+                    	<div>
+                        	<label>电子邮箱：</label>
+                            <input type="text" name="email" id="email" style="width:632px; height:30px;outline:none" />
+                        </div>
+                    </li>
+                    <li>
+                    	<div>
+                        	<label>联系地址：</label>
+                            <input type="text" name="address" id="address" style="width:632px; height:30px;outline:none" />
+                        </div>
+                    </li>
+                    <li>
+                    	<div>
+                        	<label style="vertical-align: top;    line-height:50px;">留言内容：</label>
+                        	<textarea name="content" id="content" style=" width:632px; height:180px; background:#eee; border:1px solid #ddd;outline:none" ></textarea>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="tijiao">
+                        	<a href="javascript:void(0);" onClick="cfm_msg();return false;" style="color:#fff;">提　交</a>
+				<input type="hidden" name="action" id="action" value="add" />
+                        </div>
+                        <div style="margin-top:16px; float:left;">
+                        	（请认真填写上面的信息以便保持联系）
+                        </div>
+                    </li>
+                </ul>
+              </form>
+
+				
+				
+		</div>
+	</div>
+</div>
+<!--内页详情结束-->
+

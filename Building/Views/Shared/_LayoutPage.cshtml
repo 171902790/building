@@ -1,0 +1,106 @@
+﻿@using System
+@using Microsoft.AspNet.Identity
+@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Reception/css/nei.css")
+    @Styles.Render("~/Reception/css/style.css")
+    @Styles.Render("~/Reception/css/global.css")
+</head>
+<body class="home blog et_frontend_customizer gecko et_includes_sidebar">
+
+    <!--banner start-->
+    <div id="et-slider-wrapper" style=" height:400px;" class=" et_slider_auto et_slider_speed_7000">
+        <div id="et-slides">
+            <div class="et-slide" style="background-image: url(images/bg-11.jpg);">
+                <div class="container clearfix">
+                    <!-- .description -->
+                    <div class="description">
+                        <h2>
+                            <a href="#">绵阳校傲科技有限公司</a>
+                        </h2>
+                        <p>全国领先的O2O平台，经营数码产品、信用借款、旅游业务、驾校报名、食品团购、兼职换购、交友平台、生活周边</p>
+                    </div>
+
+                    <!-- .featured-image -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .et-slide -->
+            <div class="et-slide" style="background-image: url(images/bg-43.jpg);">
+                <div class="container clearfix">
+                    <!-- .description -->
+
+                    <div class="description">
+                        <h2>
+                            <a href="#">绵阳校傲科技有限公司</a>
+                        </h2>
+                        <p>全国领先的O2O平台，经营数码产品、信用借款、旅游业务、驾校报名、食品团购、兼职换购、交友平台、生活周边</p>
+                    </div>
+
+                    <!-- .featured-image -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .et-slide -->
+            <div class="et-slide" style="background-image: url(images/bg-4-2.jpg);">
+                <div class="container clearfix">
+                    <!-- .description -->
+                    <div class="description">
+                        <h2>
+                            <a href="#">绵阳校傲科技有限公司</a>
+                        </h2>
+                        <p>全国领先的O2O平台，经营数码产品、信用借款、旅游业务、驾校报名、食品团购、兼职换购、交友平台、生活周边</p>
+                    </div>
+                    <!-- .featured-image -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .et-slide -->
+        </div>
+        <!-- #et-slides -->
+    </div>
+    <!--banner end-->
+
+    <div class="Maintop">
+        <div class="top_1200">
+            <div class="logo">
+                <img src="images/logo1.png" />
+            </div>
+            <div class="nav_list">
+                <ul>
+                    <li>@Html.ActionLink("网站首页", "Index", "Default")</li>
+                    <li>@Html.ActionLink("关于我们", "about", "About")|</li>
+                    <li>@Html.ActionLink("业务范围", "about", "About")|</li>
+                    <li>@Html.ActionLink("新闻中心", "liebiao", "Liebiao")|</li>
+                    <li>@Html.ActionLink("案例中心", "tupian", "Tupian")|</li>
+                    <li>@Html.ActionLink("招贤纳士", "liebiao", "Liebiao")|</li>
+                    <li>@Html.ActionLink("在线留言", "message", "Message")|</li>
+                    <li>@Html.ActionLink("联系我们", "about", "About")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topbj"></div>
+    <!--内页详情开始-->
+    @RenderBody()
+    <!--内页详情结束-->
+    <!--公共底部开始-->
+    <div class="footer">
+        <p>
+            Copyright © 2016  绵阳校傲科技有限公司   All Rights Reserved    欲了解业务详情，请拨打咨询热线!   <br />
+            绵阳：0816-8888888   蜀ICP：123456789-x  技术支持：<a href="#">中巨科技</a>
+        </p>
+    </div>
+    <!--公共结束-->
+    @Scripts.Render("~/Reception/js/jquery.js")
+    @Scripts.Render("~/Reception/js/superfish.js")
+    @Scripts.Render("~/Reception/js/jquery.fitvids.js")
+    @Scripts.Render("~/Reception/js/custom.js")
+    @Scripts.Render("~/Reception/js/modernizr.js")
+    @Scripts.Render("http://libs.baidu.com/jquery/1.11.1/jquery.min.js")
+</body>
+</html>
