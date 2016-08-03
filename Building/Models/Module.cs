@@ -23,7 +23,7 @@ namespace Building.Models
 
         public virtual IList<Article> Articles { get; set; }
 
-        public virtual IList<Media> Medias { get; set; }
+        public virtual IList<Ad> Medias { get; set; }
     }
 
 
@@ -47,7 +47,7 @@ namespace Building.Models
         public virtual Module Belong { get; set; }
     }
 
-    public class Media
+    public class Ad
     {
         [Key]
         public int Id { get; set; }
@@ -64,16 +64,15 @@ namespace Building.Models
 
         public string Info { get; set; }
 
-        public MediaType MediaType { get; set; }
+        public AdType AdType { get; set; }
 
         public virtual Module Belong { get; set; }
     }
 
-    public enum MediaType
+    public enum AdType
     {
-        Ad,
-        Image,
-        Flash
+        Static,
+        Mutiple
     }
 
     public class User

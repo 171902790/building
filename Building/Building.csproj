@@ -3046,9 +3046,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608030654360_first_update_models.cs" />
-    <Compile Include="Migrations\201608030654360_first_update_models.Designer.cs">
-      <DependentUpon>201608030654360_first_update_models.cs</DependentUpon>
+    <Compile Include="Migrations\201608031329393_new_database.cs" />
+    <Compile Include="Migrations\201608031329393_new_database.Designer.cs">
+      <DependentUpon>201608031329393_new_database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB.cs" />
@@ -3092,8 +3092,8 @@
     <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201608030654360_first_update_models.resx">
-      <DependentUpon>201608030654360_first_update_models.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608031329393_new_database.resx">
+      <DependentUpon>201608031329393_new_database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

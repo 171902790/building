@@ -15,7 +15,7 @@ namespace Building.Models
         }
         public DbSet<User> Users { get; set; }
 
-        public DbSet<Media> Medias { get; set; }
+        public DbSet<Ad> Ads { get; set; }
 
         public DbSet<Module> Modules { get; set; }
 
