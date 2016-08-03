@@ -10,13 +10,13 @@ namespace Building.Admin
 {
     public class AdminController : Controller
     {
-        [Route("admin")]
-        [AuthenticationFilter]
+        [HttpGet,Route("admin")]
+//        [AuthenticationFilter]
         public ActionResult Index()
         {
             using (var ctx=new DB())
             {
-                var list=ctx.Modules.ToList();
+                ViewBag.Modules = ctx.Modules.ToList();
             }
             return View("~/backstage/admin_index.cshtml");
         }
@@ -38,6 +38,29 @@ namespace Building.Admin
 
             }
             return new HttpStatusCodeResult(500);
+        }
+
+        [HttpGet,Route("list/{id=0}")]
+        public ActionResult List(int id)
+        {
+            using (var ctx = new DB())
+            {
+                if (id == 0)
+                {
+                    ViewBag.Modules = ctx.Modules.Where(x => x.Superior == null).ToList();
+                    ViewBag.IsModuleManagement = true;
+                    ViewBag.Title = "模块管理";
+                }
+                else
+                {
+                    ViewBag.IsModuleManagement = false;
+                    var module = ctx.Modules.SingleOrDefault(x => x.Id == id);
+                    ViewBag.Title = module.Name;
+                    ViewBag.SubModule = ctx.Modules.Where(x => x.Superior.Id == module.Id).ToList();
+
+                }
+            }
+            return View("~/backstage/admin_list.cshtml");
         }
     }
 }

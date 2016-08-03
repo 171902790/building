@@ -1,5 +1,8 @@
-﻿@{
+﻿@using Building.Models
+@{
     Layout = null;
+
+    
 }
 <!DOCTYPE HTML>
 <html>
@@ -16,12 +19,12 @@
     <script type="text/javascript" src="lib/respond.min.js"></script>
     <script type="text/javascript" src="lib/PIE_IE678.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
-    <link rel="stylesheet" type="text/css" href="lib/icheck/icheck.css" />
-    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/icheck/icheck.css" />
+    <link rel="stylesheet" type="text/css" href="~/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="~/static/h-ui.admin/css/style.css" />
     <!--[if IE 6]>
     <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
@@ -80,10 +83,14 @@
         <input runat="server" id="divScrollValue" type="hidden" value="" />
         <div class="menu_dropdown bk_2">
             <dl id="menu-article">
-                <dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe616;</i> 模块管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
-                        <li><a _href="article-list.html" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
+                        <li><a _href="/list" data-title="模块管理" href="javascript:void(0)">模块管理 </a></li>
+                        @foreach (var m in (List<Module>) ViewBag.Modules)
+                        {
+                            <li><a _href="/list/@m.Id" data-title="模块管理" href="javascript:void(0)">@m.Name</a></li>
+                        }
                     </ul>
                 </dd>
             </dl>
@@ -183,10 +190,10 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
-    <script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
-    <script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="~/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="~/static/h-ui.admin/js/H-ui.admin.js"></script>
 
     <script type="text/javascript">
         /*资讯-添加*/

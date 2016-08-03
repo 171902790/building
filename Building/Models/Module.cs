@@ -23,7 +23,7 @@ namespace Building.Models
 
         public virtual IList<Article> Articles { get; set; }
 
-        public virtual IList<Ad> Medias { get; set; }
+        public virtual IList<Ad> Ads { get; set; }
     }
 
 
