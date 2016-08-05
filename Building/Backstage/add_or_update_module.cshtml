@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "~/backstage/admin_layout.cshtml";
+}
+@model Building.Backstage.ModuleViewModel
+
+
+<article class="page-container">
+    <form action="/module" class="form form-horizontal" method="post" role="form">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>模块名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                @Html.TextBoxFor(m => m.Name, new { @class = "input-text" })
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">所属模块：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <span class="select-box">
+                    <select class="select" size="1" name="city">
+                        <option value="0" selected>无</option>
+                        <option value="1">北京</option>
+                        <option value="2">上海</option>
+                        <option value="3">广州</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+        <div class="row cl">
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+        </div>
+    </form>
+</article>
+
+@section js{
+    <script type="text/javascript">
+        $(function () {
+            $('.skin-minimal input').iCheck({
+                checkboxClass: 'icheckbox-blue',
+                radioClass: 'iradio-blue',
+                increaseArea: '20%'
+            });
+
+            $("#form-member-add").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 2,
+                        maxlength: 16
+                    },
+                    sex: {
+                        required: true,
+                    },
+                    mobile: {
+                        required: true,
+                        isMobile: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    uploadfile: {
+                        required: true,
+                    },
+
+                },
+                onkeyup: false,
+                focusCleanup: true,
+                success: "valid",
+                submitHandler: function (form) {
+                    //$(form).ajaxSubmit();
+                    var index = parent.layer.getFrameIndex(window.name);
+                    //parent.$('.btn-refresh').click();
+                    parent.layer.close(index);
+                }
+            });
+        });
+    </script>
+    <!--/请在上方写此页面业务相关的脚本-->
+}
+
