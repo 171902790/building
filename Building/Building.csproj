@@ -1979,6 +1979,8 @@
     <Content Include="lib\bootstrap-modal\2.2.4\bootstrap-modalmanager.js" />
     <Content Include="lib\bootstrap-Switch\bootstrapSwitch.css" />
     <Content Include="lib\bootstrap-Switch\bootstrapSwitch.js" />
+    <Content Include="lib\bootstrap.min.css" />
+    <Content Include="lib\bootstrap.min.js" />
     <Content Include="lib\datatables\1.10.0\jquery.dataTables.min.js" />
     <Content Include="lib\DD_belatedPNG_0.0.8a-min.js" />
     <Content Include="lib\dropzone\dropzone.css" />
@@ -2033,6 +2035,8 @@
     <Content Include="lib\jquery.SuperSlide\2.1.1\demo\03\demo.html" />
     <Content Include="lib\jquery.SuperSlide\2.1.1\demo\03\images\banner-1.jpg" />
     <Content Include="lib\jquery.SuperSlide\2.1.1\jquery.SuperSlide.min.js" />
+    <Content Include="lib\jquery.validate.min.js" />
+    <Content Include="lib\jquery.validate.unobtrusive.min.js" />
     <Content Include="lib\jquery.validation\1.14.0\additional-methods.js" />
     <Content Include="lib\jquery.validation\1.14.0\additional-methods.min.js" />
     <Content Include="lib\jquery.validation\1.14.0\jquery.validate.js" />
@@ -2812,6 +2816,9 @@
     <Content Include="lib\zTree\v3\demo\en\asyncData\getNodes.php" />
     <Content Include="lib\zTree\v3\demo\en\asyncData\getNodesForBigData.php" />
     <Content Include="lib\zTree\v3\README.md" />
+    <Content Include="Backstage\admin_list.cshtml" />
+    <Content Include="Backstage\add_or_update_module.cshtml" />
+    <Content Include="Backstage\admin_layout.cshtml" />
     <None Include="Views\About\about.cshtml" />
     <Content Include="static\h-ui.admin\css\H-ui.admin.css" />
     <Content Include="static\h-ui.admin\css\H-ui.login.css" />
@@ -3037,6 +3044,7 @@
     <Compile Include="Backstage\AuthenticationFilterAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Backstage\ModuleViewModel.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LiebiaoController.cs" />
@@ -3054,6 +3062,7 @@
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config">
